@@ -200,7 +200,7 @@ module RRD
         
         result = [["time"] + legends]
         (0..result_lines-1).each do |line|
-          date = start_time + line*step
+          date = start_time + (line+1)*step
           first = legends_count*line
           last = legends_count*line + legends_count - 1
           result << [date] + values[first..last]
